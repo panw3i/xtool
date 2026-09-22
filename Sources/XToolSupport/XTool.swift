@@ -1,7 +1,9 @@
+import XCLIUtils
 import Foundation
 import XKit
 import ArgumentParser
 import XUtils
+import Dependencies
 
 public enum XTool {
     public static func run(arguments: [String]? = nil) async throws {
@@ -63,12 +65,12 @@ extension ParsableCommand where Self: SendableMetatype {
                     try command.run()
                 }
             } catch where error is CancellationError || Task.isCancelled {
-                print("Cancelled.")
+                d.out.print("Cancelled.", stream: .stderr)
                 self.exit()
             } catch {
                 if ProcessInfo.processInfo.environment["XTL_DEBUG_ERRORS"] != nil {
-                    print("ERROR DETAILS:")
-                    print(String(reflecting: error))
+                    d.out.print("ERROR DETAILS:")
+                    d.out.print(String(reflecting: error))
                 }
                 self.exit(withError: error)
             }
