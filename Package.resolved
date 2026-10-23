@@ -1,5 +1,5 @@
 {
-  "originHash" : "729c46eb45d30de963087f3210e336d813bf25e00d9d7ccb7ee51a14927478f7",
+  "originHash" : "2ccd077fc130f0f1b1279d87aa61d1fc243964d7ad49489a12021577c54df9de",
   "pins" : [
     {
       "identity" : "aexml",
@@ -341,6 +341,15 @@
       "state" : {
         "revision" : "c97e0f0187d95542b4a254f5bb4dc67f43bf73c9",
         "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "swift-rcodesign",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xtool-org/swift-rcodesign",
+      "state" : {
+        "revision" : "08650ab9d3bf95a0c585581b8bd63eb7b8315264",
+        "version" : "0.2.0"
       }
     },
     {
